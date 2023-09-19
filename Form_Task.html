@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Learning HTML Form</Form></title>
+    </head>
+    <body>
+        <h1>Registration Form</h1>
+        <form action="process.php" method="get">
+
+            <!--if u put "post" u can't see the data-->
+            <!--if u put "get" u can see the data-->
+            <!--put process.php to send it to backend-->
+            <!--Input Type Text-->
+
+            <fieldset>
+            <legend>Personal Data:</legend>
+            <label for="fname">First Name : </label><br>
+            <input type="text" id="fname" name="fname"><br> 
+            <!-- Put required u need to fill all the form-->
+            <label for="lname">Last Name : </label><br>
+            <input type="text" id="lname" name="lname"><br><br>
+
+            <!--Input Type Password-->
+            <label for="Password">Password:</label><br>
+            <input type="password" id="password" name="password">
+            <br>
+            <br>
+
+            <!--input type tel-->
+            <label for="phone">Enter a phone number:</label><br><br>
+            <input type="tel" id="phone" name="phone" placeholder="1234-4567-7890" pattern="[0-9]{4}-[0-9]{4}-[0-9]{4}"><br><br>
+            <small>Example: 0589-3354-0123</small><br><br>
+
+            <!--Input type Date-->
+            <label for="birtdate">Birthdate:</label><br>
+            <input type="date" id="birtdate" name="birtdate">
+            <br><br>
+
+            <!--Input type range-->
+            <label for="height">Height:</label><br>
+            <input type="range" id="height" name="height" min="100" max="200">
+
+            <!--Select Element-->
+            <br><br>
+            <label for="Religion">Choose your Religion</label><br>
+            <select id="Religion" name="Religion">
+                <!--If U PUT MULTIPLE AFTR NAME U CAN CHOOSE MORE THAN ONE-->
+                <option value="Christian">Christian</option>
+                <option value="Moslem">Moslem</option>
+                <option value="Budhist">Budhist</option> 
+                <option value="Hindu">Hindu</option>               
+            </select>
+            <br><br>
+
+            <!--Input Type Radio-->
+            <p>Choose your Gender:</p>
+            <input type="Radio" id="Male" name="gender" value="Male"></input>
+            <!--The Value will show-->
+            <label for="Male"> Male </label><br>
+            <input type="Radio" id="Female" name="gender" value="Female"></input>
+            <!-- the name need to be the same or u can choose both not only one-->
+            <label for="Male"> Female </label><br><br>
+
+            <!--Input Type Email-->
+            <label for="Email">Enter your Email</label><br>
+            <input type="Email" id="Email" name="Email">
+
+            <!--Input Type Checkbox-->
+            <p> Choose Your Hobbies:</p>
+            <input type="checkbox" id="Hobby1" name="Hobby1" value="Playing Game"
+            <label for="Hobby1">Playing Game</label><br>
+            <input type="checkbox" id="Hobby2" name="Hobby2" value="Reading Book"
+            <label for="Hobby2">Reading Book</label><br>
+            <input type="checkbox" id="Hobby3" name="Hobby3" value="Hibernation"
+            <label for="Hobby3">Hibernation</label><br>
+            <input type="checkbox" id="Hobby4" name="Hobby4" value="Singing"
+            <label for="Hobby1">Singing</label><br><br>
+            
+            <label for="myfile">Select a file:</label>
+            <input type="file" id="myfile" name="myfile"><br><br>
+
+            <label for="quantity">Favorite Number:</label><br>
+            <input type="number" id="quantity" name="quantity" min="1" max="100">
+            <br><br>
+
+            <!--text area element-->
+            <label for="comment">Write your comment:</label><br>
+            <textarea id="comment" name="comment" rows="10" cols="30"></textarea>
+            <br><br>
+
+            <!--Input Type submit-->
+            <!--<br><br><input type="submit">-->
+            <!--Input type reset-->
+            <!--<input type="reset">-->
+
+            <!--Input Type Image-->
+            <input type="image" src="SUBMIT.png" alt="submit" width="48" height="48"><br>
+            <input type="image" src="RESET.png" alt="reset" width="48" height="48">
+            
+        </fieldset>
+        </form>
+    </body>
+    <footer>
+    </footer>
+</html>
