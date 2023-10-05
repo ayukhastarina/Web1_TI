@@ -20,7 +20,7 @@
                 color:antiquewhite;
             }
             a:hover {
-                color:blueviolet;
+                color: darkmagenta;
             }
             a:active {
                 color: lightcoral;
@@ -37,6 +37,37 @@
                 background-color: palevioletred;
                 border-color: black;
             }
+            ul.food {
+                list-style-type: square;
+                list-style-position: outside;
+                background-color: yellowgreen;
+                border: 2px solid saddlebrown;
+            }
+            ul li {
+                background-color: mediumaquamarine;
+            }
+            ul.nav {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                width: 200px;
+                background-color: #f1f1f1;
+            }
+            ul.nav li a {
+                display: block;
+                color: black;
+                border-radius: 0;
+                border: none;
+                padding: 8px 16px;
+                text-decoration: none;
+                background-color: #f1f1f1;
+            }
+
+            ul.nav li a:hover {
+                background-color:  #555;
+                color: white;
+            }
+    
         </style>
     </head>
     <body>
@@ -44,5 +75,19 @@
         <a class="pink" href="//google.com">Link To Google</a>
         <a class="green" href="https://unai.edu/">Link To FTI</a>
         <a class="blue" href="https://unai.edu/">Link To FTI</a>
+
+        <p>My Fave Food</p>
+        <ul class="food">
+            <li>Friedrice</li>
+            <li>Noodle</li>
+            <li>Seblak</li>
+        </ul>
+
+        <ul class="nav">
+            <li><a href="Hello.html">Home</a></li>
+            <li><a href="https://fti.unai.edu">FTI UNAI</a></li>
+            <li><a href="https://unai.edu">Unai</a></li>
+            <li><a href="About_2381041.html">About</a></li>
+        </ul>
     </body>
 </html>
