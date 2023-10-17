@@ -34,7 +34,7 @@ nav ul {
 }
 
 nav li:hover {
-    color: yellow;
+    color: black;
     font-weight: bolder;
 }
 
@@ -57,12 +57,15 @@ footer {
     margin-top: 20px;
     background-color: #cdcdcd;
     padding: 20px;
-    text-align: center;
 }
 
 #footercontainer {
     display: flex;
     justify-content: space-between;
+}
+
+#footercontainer div {
+    width: 30%;
 }
 
 main div img {
@@ -76,8 +79,11 @@ h2 {
 }
 
 #copyright {
+    margin-top: 10px;
+    padding-top: 20px;
     border-top: 1px solid #343434;
 }
+
 footer ul li {
     list-style-type: none;
     padding: 5px 0;
