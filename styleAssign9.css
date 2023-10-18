@@ -68,4 +68,48 @@ main img {
     display: flex;
     justify-content: space-between;
 }
+.photoarticle img {
+    padding-top: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 65%;
+}
+.hitam {
+    color: black;
+    margin-bottom: 15px;
+    font-weight: bold;
+
+  }
+  .ungu {
+    color: purple;
+    margin-top: 1px;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  .iklan_box {
+    margin: 20px 0;
+    border-left: 5px solid purple; 
+    padding-left: 20px ; 
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
