@@ -34,7 +34,7 @@ nav ul {
 }
 
 nav li:hover {
-    color: black;
+    color: yellow;
     font-weight: bolder;
 }
 
