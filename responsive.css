@@ -13,6 +13,7 @@ main {
 header {
     background-color: antiquewhite;
     padding: 25px;
+    text-align: center;
 }
 
 footer {
@@ -25,5 +26,8 @@ footer {
 @media only screen and (max-width: 600px) {
     body {
         background-color: lightblue;
+    }
+    h1 {
+        color: blueviolet;
     }
 }
