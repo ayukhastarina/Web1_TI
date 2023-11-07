@@ -38,8 +38,28 @@
             return x + y + z;
         }
 
+        function substract(a, b) {
+            return a-b;
+        }
+
+        document.write("<br>");
         document.write(add(x, y, z));
+        document.write("<br>" + substract(y, z));
 
     </script>
+
+    <br><br>
+    Name : <input id="name "type="text"> <button onclick="display()">Send!</button>
+
+    <script>
+        function display() {
+        let name = document.getElementById("name").value;
+        // alert(name);
+        // document.write(name);
+        document.getElementById("ds").innerHTML = name;
+        }
+
+    </script>
+    <h2 id="ds"></h2>
 </body>
 </html>
