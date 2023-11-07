@@ -24,10 +24,8 @@ footer {
 }
 
 @media only screen and (max-width: 600px) {
-    body {
-        background-color: lightblue;
+    main {
+        flex-direction: column; /*adjust posisi ke column saat window size makin kecil*/
     }
-    h1 {
-        color: blueviolet;
-    }
+ 
 }
