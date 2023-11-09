@@ -2,18 +2,46 @@
 <html>
 <head>
     <title>Simple Calculator</title>
-    <script src="scriptcalc.js"></script>
+    <script>
+        function calculate() {
+            var number1 = +document.getElementById('number1').value; // Convert string to number using unary plus operator
+            var number2 = +document.getElementById('number2').value; // Convert string to number using unary plus operator
+            var operation = document.getElementById('operation').value;
+            var result = document.getElementById('result');
+
+            switch (operation) {
+                case 'add':
+                    result.textContent = 'The result is = ' + (number1 + number2);
+                    break;
+                case 'subtract':
+                    result.textContent = 'The result is = ' + (number1 - number2);
+                    break;
+                case 'multiply':
+                    result.textContent = 'The result is = ' + (number1 * number2);
+                    break;
+                case 'divide':
+                    if (number2 == 0) {
+                        result.textContent = 'Error: Division by zero is not allowed.';
+                    } else {
+                        result.textContent = 'The result is = ' + (number1 / number2);
+                    }
+                    break;
+                default:
+                    result.textContent = 'Invalid operation';
+            }
+        }
+    </script>
 </head>
 <body>
     <h1>Simple Calculator</h1>
-    <input type="number" id="number1" placeholder="Enter the number" required>
+    <input type="number" id="number1" placeholder="Enter the first number" required>
     <select id="operation">
         <option value="add">+</option>
         <option value="subtract">-</option>
         <option value="multiply">x</option>
         <option value="divide">/</option>
     </select>
-    <input type="number" id="number2" placeholder="Enter the number" required>
+    <input type="number" id="number2" placeholder="Enter the second number" required>
     <button onclick="calculate()">Calculate</button>
     <p id="result">The result is = </p>
 </body>
