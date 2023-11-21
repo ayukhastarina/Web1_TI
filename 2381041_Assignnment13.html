@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JS Events</title>
+    <style>
+        .black-box {
+            background-color: rgb(91, 45, 45);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+    
+        }
+    </style>
+</head>
+<body>
+    <div class="black-box">
+        <h2 onmouseover="onMouseOver()" >Mouse Over this Text ~ </h2>
+        <input type="text" id="inputText" onkeydown="onKeyDown()">
+        <button onclick="onClick()">Click Me</button>
+    </div>
+
+    <script>
+        function onLoad() {
+            alert("The page has finished loading!");
+        }
+
+        function onMouseOver() {
+            alert("Mouse Bergerak WEH!!");
+        }
+
+        function onKeyDown() {
+            var inputText = document.getElementById("inputText");
+            inputText.value = "Pencet Keyboardnya!";
+        }
+
+        function onClick() {
+            alert("Button TerKlik!");
+        }
+    </script>
+</body>
+</html>

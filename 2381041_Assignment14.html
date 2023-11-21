@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" type="text/css" href="contactstyle.css">
+    <script>
+        function validateForm() {
+            var name = document.forms["profileForm"]["name[userName]"].value;
+            var email = document.forms["profileForm"]["Email[userEmail]"].value;
+            var username = document.forms["profileForm"]["username[userName]"].value;
+            var password = document.forms["profileForm"]["username[password]"].value;
+            var religion = document.getElementById("religion").value;
+            var address = document.forms["profileForm"]["textarea"].value;
+
+            if (name === "" && email === "" && username === "" && password === "" && religion === "Select Your Religion.." && address === "") {
+            alert("All fields must be filled out. Please fill the form again.");
+            return false;
+            }
+
+            // nama
+            if (name == "") {
+                alert("Please Fill the Name");
+                return false;
+            }
+
+            if (/\d/.test(name)) {
+                alert("Name is not valid. It should not contain numbers.");
+                return false;
+            }
+
+            //email
+            if (email == "") {
+                alert("Please Fill the Email. Can't leave Blank");
+                return false;
+            }
+            // Check if email contains "@"
+            if (!email.includes("@")) {
+                alert("Email is not valid");
+                return false;
+            }
+            //password
+            if (password == "") {
+                alert("Password can't be Blank");
+                return false;
+            }
+            if (religion == "Select Your Religion..") {
+                alert("Please Select");
+                return false;
+            }
+
+            if (address == "") {
+                alert("Please fill the adress.");
+                return false;
+            }
+            
+
+            return true;
+        }
+    </script>
+    <title>CD PROJEKT RED</title>
+</head>
+
+<body>
+
+    <header class="navbar">
+        <!-- your header content -->
+    </header>
+
+    <!-- contact form -->
+
+    <div class="boxemail">
+        <div class="title-box"><h1>Your Profile<br></h1></div>
+        <div class="caption-mail"><h3>Please Input Your Data Here</h3></div>
+
+        <!-- Add form action and send it -->
+        <form name="profileForm" action="submit_form.php" onsubmit="return validateForm()" method="post">
+            <section>
+                <div class="fillform"><h4>NAME</h4>
+                    <input type="text" id="new-input" name="name[userName]" placeholder="Type-in your fullname">
+                </div>
+
+                <div class="fillform"><h4>E-MAIL</h4>
+                    <input type="text" id="new-input" name="Email[userEmail]" placeholder="Type-in your e-mail">
+                </div>
+
+                <div class="fillform"><h4>USERNAME</h4>
+                    <input type="text" id="new-input" name="username[userName]" placeholder="Type-in your username">
+                </div>
+
+                <div class="fillform"><h4>PASSWORD</h4>
+                    <input type="password" id="new-input" name="username[password]" placeholder="Type-in your password">
+                </div><br>
+
+                <div class="wrapper">
+                    <input type="radio" name="select" id="option-1" checked>
+                    <label for="option-1">Female</label>
+                    <input type="radio" name="select" id="option-2">
+                    <label for="option-2">Male</label>
+                </div>
+
+                <br>
+                <label for="religion"></label>
+                <select id="religion" name="religion">
+                    <option value="christian">Select Your Religion..</option>
+                    <option value="christian">Christian</option>
+                    <option value="moslem">Muslim</option>
+                    <option value="buddhist">Buddhist</option>
+                </select>
+
+                <div class="texttowrite"><h4>WRITE YOUR ADDRESS HERE</h4>
+                    <label for="textarea"></label>
+                    <textarea id="textarea" name="textarea" rows="4" cols="50" placeholder="Enter your address here..."></textarea>
+                </div>
+
+                <div class="hobby"><h4>HOBBY</h4>
+                    <ul class="hobbies-list">
+                        <li class="hobby-item">
+                            <input type="checkbox" class="hobby-checkbox" id="hobby1" name="hobbies" value="Reading">
+                            <label for="hobby1">Reading</label>
+                        </li>
+                        <li class="hobby-item">
+                            <input type="checkbox" class="hobby-checkbox" id="hobby2" name="hobbies" value="Painting">
+                            <label for="hobby2">Painting</label>
+                        </li>
+                        <li class="hobby-item">
+                            <input type="checkbox" class="hobby-checkbox" id="hobby3" name="hobbies" value="Cooking">
+                            <label for="hobby3">Cooking</label>
+                        </li>
+                        <li class="hobby-item">
+                          <input type="checkbox" class="hobby-checkbox" id="hobby4" name="hobbies" value="Playing">
+                          <label for="hobby3">Playing</label>
+                        </li>
+                        <li class="hobby-item">
+                        <input type="checkbox" class="hobby-checkbox" id="hobby5" name="hobbies" value="Singing">
+                        <label for="hobby3">Singing</label>
+                        </li>
+                        <li class="hobby-item">
+                          <input type="checkbox" class="hobby-checkbox" id="hobby6" name="hobbies" value="Hiking">
+                          <label for="hobby3">Hiking</label>
+                        </li>
+                        <li class="hobby-item">
+                          <input type="checkbox" class="hobby-checkbox" id="hobby6" name="hobbies" value="Watching">
+                          <label for="hobby3">Watching</label>
+                        </li>
+                        <!-- Add other hobby items -->
+                    </ul>
+                    <div><button type="submit" onclick="return validateForm()">SUBMIT</button></div>
+                </div>
+            </section>
+        </form>
+    </div>
+
+</body>
+
+</html>
